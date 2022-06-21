@@ -73,4 +73,4 @@ group :test do
 end
 
 gem 'devise'
-gem 'mailcatcher'
+gem "letter_opener", group: :development
