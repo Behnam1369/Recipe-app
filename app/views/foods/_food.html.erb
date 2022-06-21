@@ -1,0 +1,15 @@
+<div id="<%= dom_id food %>" class="food">
+  <div>
+    <strong>Name:</strong>
+    <%= food.name %>
+  </div>
+
+  <div>
+    <strong>Price:</strong>
+    $ <%= food.price %> / <%= food.measurement_unit %>
+  </div>
+
+  <%= button_to "Delete", food, method: :delete, class: "delete_food"  %>
+
+
+</div>
