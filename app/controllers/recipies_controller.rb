@@ -3,6 +3,10 @@ class RecipiesController < ApplicationController
     @recipies = current_user.recipies
   end
 
+  def public_recipies
+    @recipies = Recipy.where(public: true).order(created_at: :desc)
+  end
+
   def show
     @recipy = Recipy.find(params[:id])
   end
