@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Recipy < ApplicationRecord
   belongs_to :user
 

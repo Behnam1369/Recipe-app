@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class RecipiesController < ApplicationController
   def index
     @recipies = current_user.recipies
