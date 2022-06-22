@@ -1,7 +1,9 @@
-class Recipy < ApplicationRecord
-    belongs_to :user
+# frozen_string_literal: true
 
-    validates :name, presence: true
-    validates :preparation_time, presence: true
-    validates :cooking_time, presence: true
+class Recipy < ApplicationRecord
+  belongs_to :user
+
+  validates :name, presence: true
+  validates :preparation_time, presence: true
+  validates :cooking_time, presence: true
 end

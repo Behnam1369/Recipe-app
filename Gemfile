@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -74,7 +76,7 @@ group :test do
   gem 'webdrivers'
 end
 
-gem 'devise'
-gem 'letter_opener', group: :development
-gem 'erb-formatter'
 gem 'cancancan'
+gem 'devise'
+gem 'erb-formatter'
+gem 'letter_opener', group: :development
