@@ -1,0 +1,29 @@
+<h1>new recipy!</h1>
+
+<%= form_with model:recipy, method: :post do |f| %>
+  <div>
+    <%= f.label :name, 'Recipy name:'%>
+    <%= f.text_field :name, required:true %>
+  </div>
+
+  <div>
+    <%= f.label :preparation_time, 'Preparation time in hours'%>
+    <%= number_field :preparation_time, required:true %>
+  </div>
+
+  <div>
+    <%= f.label :cooking_time, 'cooking time in hours'%>
+    <%= number_field :preparation_time, required:true %>
+  </div>
+
+    <div>
+    <%= f.label :description%>
+    <%= f.text_area :description, required:true %>
+  </div>
+
+<div>
+    <%= f.label :public, "Publish recipy" %> <br />
+    <%= f.check_box :public %> <br />
+</div>
+  <%= f.submit 'Create' %>
+<%end%>
