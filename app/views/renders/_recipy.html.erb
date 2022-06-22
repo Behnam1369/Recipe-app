@@ -1,0 +1,10 @@
+<div class="recipy-card">
+<div>
+<h2><%=recipy.name%></h2>
+   <%= button_to 'Remove', recipy_path(id: recipy.id), method: :delete %>
+   <%= link_to 'Details', recipy_path(id: recipy.id)%>
+</div>
+<p>
+<%=recipy.description%>
+</p>
+</div>
