@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 1fr;
   clear: both;
-  padding-top: 20px;
   padding: 0;
   margin: 0;
 }
@@ -13,10 +12,10 @@
   padding: 15px 5px;
 }
 
-ul.shopping_list .shopping_item:nth-child(odd) {
-  background-color: whitesmoke;
-}
-
 div.shopping_list .shopping_item {
   background-color: silver;
+}
+
+ul.shopping_list .shopping_item:nth-child(odd) {
+  background-color: whitesmoke;
 }
