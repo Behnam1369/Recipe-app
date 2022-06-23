@@ -10,4 +10,27 @@
    cooking time: <%= @recipy.cooking_time%>
 </p>
 </div>
+      <%= form_with(model: RecipyFood.new, url: recipy_recipy_foods_url(recipy_id:@recipy.id), class:"recipe-form") do |f| %>
+       <div class="form-group">
+      <%= f.label :food %><br />
+      <%= f.search_field :food, autofocus: true, autocomplete: "ingredient", list: 'foods' %>
+      <datalist id="foods">
+        <% Food.all.each do |food| %>
+          <option value="<%= food.name %>">
+        <% end %>
+      <datalist>
+    </div>
+        <div class="recipe-form_input">
+          <%= f.label :quantity %>
+          <%= f.number_field :quantity %>
+        </div>
+        <%= f.submit "Add Ingredient" %>
+      <% end %>
+
+      <div>
+        <% @ingredients.each do |ingredient|%>
+        <h3><%= ingredient.food.name%></h3>
+          <%= button_to "Remove", recipy_recipy_food_path(recipy_id:@recipy.id, id:ingredient.id), method: :delete%>
+        <%end%>
+      <div>
 </section>

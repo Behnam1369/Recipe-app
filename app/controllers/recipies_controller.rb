@@ -5,13 +5,11 @@ class RecipiesController < ApplicationController
 
   def show
     @recipy = Recipy.find(params[:id])
+    @ingredients = @recipy.recipy_foods.includes(:food)
   end
 
   def new
     @recipy = Recipy.new
-    respond_to do |format|
-      format.html { render :new }
-    end
   end
 
   def create
