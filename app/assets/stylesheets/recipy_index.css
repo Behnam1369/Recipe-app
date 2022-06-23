@@ -54,3 +54,7 @@
 .description {
   text-align: center;
 }
+
+.border-null {
+  border: none;
+}
