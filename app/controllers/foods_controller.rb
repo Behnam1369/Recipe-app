@@ -11,6 +11,19 @@ class FoodsController < ApplicationController
     @food = Food.new
   end
 
+  def shopping_list
+    sql = 'Select b.name, b.measurement_unit, b.price, sum(a.quantity) as quantity from
+      recipy_foods as a
+      inner join foods as b on a.food_id = b.id
+      inner join recipies as c on a.recipy_id = c.id
+      where c.user_id = ' + current_user.id.to_s + '
+      group by b.name, b.measurement_unit, b.price
+      '
+    @foods = ActiveRecord::Base.connection.execute(sql)
+    # @foods = ('select * from foods')
+    # RecipyFood.joins(:food).where(recipy: current_user.recipies).includes(:food).group('foods.name')
+  end
+
   # POST /foods or /foods.json
   def create
     @food = Food.new(food_params)
