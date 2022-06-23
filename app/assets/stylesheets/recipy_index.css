@@ -1,4 +1,4 @@
-.recipy-card{
+.recipy-card {
   display: flex;
   width: 90%;
   margin: 20px 0;
@@ -7,51 +7,50 @@
   border: 1px solid black;
 }
 
-.recipy-head{
-    width: 30%;
-    height: 100%;
+.recipy-head {
+  width: 30%;
+  height: 100%;
 }
 
-.recipy-head > h2{
-    font-size: 30px;
+.recipy-head > h2 {
+  font-size: 30px;
 }
 
-.buttons-cont{
-    width: 100%;
-    display: flex;
-    gap: 10px;
+.buttons-cont {
+  width: 100%;
+  display: flex;
+  gap: 10px;
 }
 
-.buttons-cont > a{
-    font-size: 30px;
-    text-decoration: none;
-    color: rgb(131, 130, 130);
-    font-size: 15px;
-    border: 1px solid black;
-    padding: 3px 5px;
-    border-radius: 3px;
+.buttons-cont > a {
+  text-decoration: none;
+  color: rgb(131, 130, 130);
+  font-size: 15px;
+  border: 1px solid black;
+  padding: 3px 5px;
+  border-radius: 3px;
 }
 
-.btn, .new-rcp{
-    font-size: 30px;
-    color: rgb(131, 130, 130);
-    background-color: #fff;
-    font-size: 15px;
-    border: 1px solid black;
-    padding: 3px 5px;
-    border-radius: 3px;
+.btn,
+.new-rcp {
+  color: rgb(131, 130, 130);
+  background-color: #fff;
+  font-size: 15px;
+  border: 1px solid black;
+  padding: 3px 5px;
+  border-radius: 3px;
 }
 
-.btn:hover{
+.btn:hover {
   cursor: pointer;
 }
 
-.desc-cont{
-    width: 100%;
-    border: 1px solid #a8a6a6;
-    border-radius: 10px;
+.desc-cont {
+  width: 100%;
+  border: 1px solid #a8a6a6;
+  border-radius: 10px;
 }
 
-.description{
-    text-align: center;
+.description {
+  text-align: center;
 }
