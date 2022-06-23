@@ -1,0 +1,33 @@
+table{
+    border: 1px solid black;
+    width: 90%;
+    margin: 30px  auto;
+}
+
+th{
+    border: 1px solid black;
+    height: 30px;
+}
+
+td{
+    border-inline: 1px solid black;
+    height: 30px;
+}
+
+.recipe-head{
+    font-size: 40px;
+    text-align: center;
+}
+
+.recipe-info{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.recipe-form{
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}

@@ -1,3 +1,4 @@
+<section class="login">
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {"data-turbo": "false", class: 'form'}) do |f| %>
@@ -19,8 +20,11 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", class:"btn" %>
   </div>
 <% end %>
 
+<div class="links">
 <%= render "devise/shared/links" %>
+</div>
+</section>
