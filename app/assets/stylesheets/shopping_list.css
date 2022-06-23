@@ -1,0 +1,21 @@
+.shopping_list {
+  display: grid;
+  grid-template-columns: 1fr;
+  clear: both;
+  padding: 0;
+  margin: 0;
+}
+
+.shopping_list .shopping_item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 15px 5px;
+}
+
+div.shopping_list .shopping_item {
+  background-color: silver;
+}
+
+ul.shopping_list .shopping_item:nth-child(odd) {
+  background-color: whitesmoke;
+}
