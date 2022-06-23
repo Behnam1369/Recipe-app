@@ -1,0 +1,13 @@
+.public_recipes_list {
+  padding: 0;
+}
+
+.public_recipe {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-flow: column;
+  list-style-type: none;
+  border: solid 1px silver;
+  margin: 5px;
+  width: 100%;
+}
