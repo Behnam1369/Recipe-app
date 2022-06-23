@@ -10,7 +10,7 @@
    cooking time: <%= @recipy.cooking_time%>
 </p>
 </div>
-
+     <% if can? :manage, @recipy %>
       <%= form_with(model: RecipyFood.new, url: recipy_recipy_foods_url(recipy_id:@recipy.id), class:"recipe-form") do |f| %>
        <div class="form-group">
       <%= f.label :food %><br />
@@ -27,6 +27,7 @@
         </div>
         <%= f.submit "Add Ingredient" %>
       <% end %>
+     <%end%>
 
         <table>
           <tr>
@@ -40,9 +41,11 @@
         <td><%= ingredient.food.name%></td>
         <td><%= ingredient.quantity%></td>
         <td><%= ingredient.food.price%></td>
+      <% if can? :manage, @recipy %>
         <td>
           <%= button_to "Remove", recipy_recipy_food_path(recipy_id:@recipy.id, id:ingredient.id), method: :delete, class:"btn"%>
         </td>
+      <%end%>
         </tr>
         <%end%>                
       </table>
