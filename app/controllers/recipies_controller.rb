@@ -4,7 +4,8 @@ class RecipiesController < ApplicationController
   end
 
   def public_recipies
-    @recipies = Recipy.where(public: true).order(created_at: :desc)
+    @foods = ActiveRecord::Base.connection.execute(sql)
+    @recipies = Recipy.includes(:recipy_foods).where(public: true).order(created_at: :desc)
   end
 
   def show
