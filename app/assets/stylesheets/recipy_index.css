@@ -13,11 +13,10 @@
 }
 
 h2 {
-  float: left;
   margin-top: 0;
 }
 
-.recipy-head > h2 {
+.recipy-head>h2 {
   font-size: 30px;
 }
 
@@ -27,7 +26,7 @@ h2 {
   gap: 10px;
 }
 
-.buttons-cont > a {
+.buttons-cont>a {
   text-decoration: none;
   color: rgb(131, 130, 130);
   font-size: 15px;
@@ -51,4 +50,8 @@ h2 {
 
 .border-null {
   border: none;
+}
+
+.btn_shopping_list {
+  white-space: nowrap;
 }

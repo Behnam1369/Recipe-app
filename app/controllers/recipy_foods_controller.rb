@@ -1,8 +1,8 @@
 class RecipyFoodsController < ApplicationController
   def create
-    food = Food.find_by(name: recipy_foods_params[:food])
-    recipy = Recipy.find(params[:recipy_id])
-    ingredient = RecipyFood.new(food:, recipy:, quantity: recipy_foods_params[:quantity])
+    foods = Food.find_by(name: recipy_foods_params[:food])
+    recipe = Recipy.find(params[:recipy_id])
+    ingredient = RecipyFood.new(food: foods, recipy: recipe, quantity: recipy_foods_params[:quantity])
 
     if ingredient.save
       flash[:success] = 'Ingredient added'
