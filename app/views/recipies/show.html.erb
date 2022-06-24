@@ -4,15 +4,25 @@
 </h2>
 <br />
 <div class="recipe-info">
+  <div class="toggle_container">
+    Public <%= button_to "", "/public_toggle/#{@recipy.id}", class:"btn btn_recipe_state #{@recipy.public}" %>
+  </div>
+
 <p>
   preparation time: <%= @recipy.preparation_time%>
 </p>
 <p>
    cooking time: <%= @recipy.cooking_time%>
 </p>
+<p>
+   Description: 
+   <br/>
+   <p style="font-weight: normal"><%= @recipy.description%></p>
+</p>
 </div>
   <% if can? :manage, @recipy %>
   <%= form_with(model: RecipyFood.new, url: recipy_recipy_foods_url(recipy_id:@recipy.id), class:"recipe-form") do |f| %>
+    <%= link_to("Shopping list", shopping_list_path, method: :get, data: { turbo_method: :get }, class:"btn btn_shopping_list") %>
     <div class="form-group">
       Food: 
       <%= f.search_field :food, autofocus: true, autocomplete: "ingredient", list: 'foods' %>

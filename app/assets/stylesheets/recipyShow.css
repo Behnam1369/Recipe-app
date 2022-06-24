@@ -61,3 +61,21 @@ td.action {
 td.action form {
   display: inline-block;
 }
+
+.btn_recipe_state.true {
+  width: 50px;
+  height: 20px;
+  background-image: linear-gradient(to right, green 70%, silver 70%);
+}
+
+.btn_recipe_state.false {
+  width: 50px;
+  height: 20px;
+  background-image: linear-gradient(to right, silver 30%, red 30%);
+}
+
+.toggle_container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
