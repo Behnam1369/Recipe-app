@@ -9,5 +9,17 @@
   list-style-type: none;
   border: solid 1px silver;
   margin: 5px;
-  width: 100%;
+  width: calc(100% - 40px);
+  padding: 20px;
+  grid-gap: 10px;
+}
+
+.public_recipe h3 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.public_recipe h4 {
+  font-size: 18px;
+  margin: 0;
 }

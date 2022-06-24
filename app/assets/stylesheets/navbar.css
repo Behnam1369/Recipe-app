@@ -1,6 +1,5 @@
-
 header {
-  background-color: rgb(153, 149, 149);
+  background-color: black;
   position: fixed;
   inset: 0 0 90vh 0;
 }
@@ -28,6 +27,10 @@ header {
   font-size: 20px;
 }
 
+.nav-li > a:hover {
+  color: yellow;
+}
+
 body {
   padding-top: 15vh;
 }
@@ -35,4 +38,9 @@ body {
 .logo {
   color: aliceblue;
   font-size: 45px;
+}
+
+nav a h2 {
+  margin: 0;
+  color: white;
 }

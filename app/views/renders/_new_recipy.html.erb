@@ -1,6 +1,6 @@
-<h1>new recipy!</h1>
 
 <%= form_with model:recipy, method: :post do |f| %>
+  <h1>New Recipe</h1>
   <div>
     <%= f.label :name, 'Recipy name:'%>
     <%= f.text_field :name, required:true %>
@@ -22,8 +22,8 @@
   </div>
 
 <div>
-    <%= f.label :public, "Publish recipy" %> <br />
+    <%= f.label :public, "Publish recipy" %> 
     <%= f.check_box :public %> <br />
 </div>
-  <%= f.submit 'Create' %>
+  <%= f.submit 'Create', class:"btn save" %>
 <%end%>
