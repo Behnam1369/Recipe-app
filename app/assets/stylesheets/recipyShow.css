@@ -2,11 +2,14 @@ table {
   border: 1px solid black;
   width: 90%;
   margin: 30px auto;
+  border-collapse: collapse;
 }
 
 th {
   border: 1px solid black;
   height: 30px;
+  background-color: gray;
+  color: white;
 }
 
 td {
@@ -45,15 +48,6 @@ form.recipe-form {
 
 .form-group {
   display: contents;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-th {
-  background-color: gray;
-  color: white;
 }
 
 tr:nth-child(odd) {

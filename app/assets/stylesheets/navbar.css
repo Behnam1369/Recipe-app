@@ -12,7 +12,7 @@ header {
   align-items: center;
 }
 
-.navbar>ul {
+.navbar > ul {
   display: flex;
 }
 
@@ -20,14 +20,14 @@ header {
   list-style: none;
 }
 
-.nav-li>a {
+.nav-li > a {
   text-decoration: none;
   margin-inline: 10px;
   color: aliceblue;
   font-size: 20px;
 }
 
-.nav-li>a:hover {
+.nav-li > a:hover {
   color: yellow;
 }
 
