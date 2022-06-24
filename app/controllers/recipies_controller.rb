@@ -39,6 +39,13 @@ class RecipiesController < ApplicationController
     redirect_back(fallback_location: root_path)
   end
 
+  def public_toggle
+    @recipy = Recipy.find(params[:id])
+    @recipy['public'] = !@recipy['public']
+    @recipy.save
+    redirect_to action: :show
+  end
+
   private
 
   def recipy_params
