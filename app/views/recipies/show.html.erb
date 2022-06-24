@@ -2,6 +2,7 @@
 <h2 class="recipe-head">
   <%= @recipy.name%>
 </h2>
+<br />
 <div class="recipe-info">
 <p>
   preparation time: <%= @recipy.preparation_time%>
@@ -10,10 +11,10 @@
    cooking time: <%= @recipy.cooking_time%>
 </p>
 </div>
-     <% if can? :manage, @recipy %>
-      <%= form_with(model: RecipyFood.new, url: recipy_recipy_foods_url(recipy_id:@recipy.id), class:"recipe-form") do |f| %>
-       <div class="form-group">
-      <%= f.label :food %><br />
+  <% if can? :manage, @recipy %>
+  <%= form_with(model: RecipyFood.new, url: recipy_recipy_foods_url(recipy_id:@recipy.id), class:"recipe-form") do |f| %>
+    <div class="form-group">
+      Food: 
       <%= f.search_field :food, autofocus: true, autocomplete: "ingredient", list: 'foods' %>
       <datalist id="foods">
         <% Food.all.each do |food| %>
@@ -21,32 +22,31 @@
         <% end %>
       <datalist>
     </div>
-        <div class="recipe-form_input">
-          <%= f.label :quantity %><br />
-          <%= f.number_field :quantity %>
-        </div>
-        <%= f.submit "Add Ingredient" %>
-      <% end %>
-     <%end%>
-
-        <table>
-          <tr>
-        <th>Food</th>
-        <th>Quantity</th>
-        <th>Value</th>
-        <th>Actions</th>
-          </tr>    
-        <% @ingredients.each do |ingredient|%>
-        <tr>
-        <td><%= ingredient.food.name%></td>
-        <td><%= ingredient.quantity%></td>
-        <td><%= ingredient.food.price%></td>
+    <div class="form-group">
+      Quantity: 
+      <%= f.number_field :quantity %>
+    </div>
+    <%= f.submit "Add Ingredient", class:'btn save' %>
+  <% end %>
+  <%end%>
+  <table>
+    <tr>
+      <th>Food</th>
+      <th>Quantity</th>
+      <th>Value</th>
+      <th>Actions</th>
+    </tr>    
+    <% @ingredients.each do |ingredient|%>
+    <tr>
+      <td><%= ingredient.food.name%></td>
+      <td><%= ingredient.quantity%></td>
+      <td><%= ingredient.food.price%></td>
       <% if can? :manage, @recipy %>
-        <td>
-          <%= button_to "Remove", recipy_recipy_food_path(recipy_id:@recipy.id, id:ingredient.id), method: :delete, class:"btn"%>
-        </td>
+      <td class="action">
+        <%= button_to "Remove", recipy_recipy_food_path(recipy_id:@recipy.id, id:ingredient.id), method: :delete, class:"btn delete"%>
+      </td>
       <%end%>
-        </tr>
-        <%end%>                
-      </table>
+    </tr>
+    <%end%>                
+  </table>
 </section>

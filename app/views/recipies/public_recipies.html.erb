@@ -2,7 +2,7 @@
 <ul class="public_recipes_list">
   <% @recipies.each do |recipe| %>
     <li class="public_recipe">
-      <h3><%= link_to recipe.name,"/recipies/#{recipe.id}", class:'btn border-null' %></h3>
+      <h3><%= link_to recipe.name,"/recipies/#{recipe.id}", class:'border-null' %></h3>
       <h4>By: <%= recipe.user.name %></h4>
       <span> Total food items: <%= recipe.recipy_foods.count  %> </span>
       <span> Total price: 
@@ -12,10 +12,7 @@
           total_price += item.quantity * item.food.price
         end
         total_price
-
         %> 
-
-
       </span>
     </li>
   <% end %>

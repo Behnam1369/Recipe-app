@@ -1,6 +1,6 @@
 <section>
  <h2>Recipes</h2>
-   <%= link_to("New recipe", new_recipy_path, method: :get, data: { turbo_method: :get }, class: 'new-rcp') %>
+   <%= link_to("New recipe", new_recipy_path, method: :get, data: { turbo_method: :get }, class: 'btn new-rcp') %>
 </section>
 
 <%= render partial: "renders/recipy", collection: @recipies %>
