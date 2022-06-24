@@ -11,7 +11,6 @@ RSpec.describe 'Foods', type: :feature do
 
   describe 'GET /index' do
     it 'should visit the home page' do
-      visit root_path
       expect(page).to have_content('Foods')
     end
   end
