@@ -1,19 +1,8 @@
- 
-
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Recipe App
 
 The Recipe app is a web application developed using Ruby on Rails and It will keep track of all your recipes and ingredients. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe.
-
-# Project screenshots
-
-will be added
-
-# Live demo 
-
-will be added
-
 
 # Requirements for this project
 
