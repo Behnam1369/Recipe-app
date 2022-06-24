@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+  <h1>New food</h1>
   <div>
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
@@ -27,6 +28,10 @@
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit class:'btn save' %>
   </div>
+  <div>
+    <%= link_to "Back to foods", foods_path %>
+  </div>
+
 <% end %>

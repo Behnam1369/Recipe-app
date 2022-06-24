@@ -1,6 +1,6 @@
 <header>
 <nav class="navbar">
-<h2 classname="logo">recipes</h2>
+<a href="/"><h2 classname="logo">Recipes</h2></a>
 <ul>
 <li class="nav-li">
       <%= link_to("Log out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete }) if user_signed_in? %>
