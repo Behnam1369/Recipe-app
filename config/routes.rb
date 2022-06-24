@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :recipy_foods, only: %i[create destroy new]
   end
 
-  root to: 'users#index'
+  root to: 'foods#index'
 
   get '/public_recipes', to: 'recipies#public_recipies'
   get '/shopping_list', to: 'foods#shopping_list'

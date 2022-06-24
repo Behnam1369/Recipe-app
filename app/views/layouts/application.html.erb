@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RecipeApp</title>
+    <title>Recipes</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,7 +11,9 @@
   </head>
 
   <body>
-      <%= render partial: 'renders/flash' %>
+  <%= render partial: 'renders/navbar' if user_signed_in? %>
+
+    <%= render partial: 'renders/flash' %>
     <%= yield %>
   </body>
 </html>

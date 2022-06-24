@@ -1,0 +1,38 @@
+
+header {
+  background-color: rgb(153, 149, 149);
+  position: fixed;
+  inset: 0 0 90vh 0;
+}
+
+.navbar {
+  width: 80%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar > ul {
+  display: flex;
+}
+
+.nav-li {
+  list-style: none;
+}
+
+.nav-li > a {
+  text-decoration: none;
+  margin-inline: 10px;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+body {
+  padding-top: 15vh;
+}
+
+.logo {
+  color: aliceblue;
+  font-size: 45px;
+}
