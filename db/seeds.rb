@@ -6,4 +6,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-User.create(email: 'lily@gmail.com', password: '123456', confirmed_at: DateTime.now, name: 'lily')
+user = User.create(email: 'lily@gmail.com', password: '123456', confirmed_at: DateTime.now, name: 'lily')
+
+food = Food.create(name: 'chicken wings', measurement_unit: 'kg', price: '10', user_id: user.id)
+recipe = Recipy.create(name: 'fried chicken', preparation_time: '1 hour', cooking_time: '2 hours', description: 'Just some fried chicken wings', public: true, user_id: user.id)
+recipe_food = RecipyFood.create(quantity: 2, recipy_id: recipe.id, food_id: food.id)
