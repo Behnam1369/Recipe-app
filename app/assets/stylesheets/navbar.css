@@ -1,0 +1,46 @@
+header {
+  background-color: black;
+  position: fixed;
+  inset: 0 0 90vh 0;
+}
+
+.navbar {
+  width: 80%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar > ul {
+  display: flex;
+}
+
+.nav-li {
+  list-style: none;
+}
+
+.nav-li > a {
+  text-decoration: none;
+  margin-inline: 10px;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+.nav-li > a:hover {
+  color: yellow;
+}
+
+body {
+  padding-top: 15vh;
+}
+
+.logo {
+  color: aliceblue;
+  font-size: 45px;
+}
+
+nav a h2 {
+  margin: 0;
+  color: white;
+}

@@ -1,0 +1,27 @@
+.food_list {
+  display: grid;
+  grid-template-columns: 1fr;
+  clear: both;
+  padding-top: 20px;
+}
+
+.food_list .food {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr;
+  padding: 15px 5px;
+}
+
+.food_list .food:nth-child(odd) {
+  background-color: whitesmoke;
+}
+
+.food_title {
+  float: left;
+  margin: 0;
+}
+
+.new_food {
+  float: right;
+  padding: 5px;
+  border: solid 1px silver;
+}

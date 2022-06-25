@@ -1,0 +1,32 @@
+<h2>Shopping List</h2>
+<br />
+<br />
+<br />
+<h3> Number of items: <%= @foods.count %> </h3>
+<h3> Total price: $
+  <%= 
+    total_price = 0
+    @foods.each do |item|
+      total_price += item['price'] * item['quantity']
+    end
+    total_price
+  %> 
+</h3>
+<div class="shopping_list">
+  <div class="shopping_item"> 
+    <span>Food</span> 
+    <span>Quantity</span> 
+    <span>Unit Price</span> 
+    <span>Amount</span> 
+  </div>
+</div>
+<ul class="shopping_list">
+<% @foods.each do |item| %>
+  <li class="shopping_item"> 
+    <span><%= item['name'] %></span> 
+    <span><%= item['quantity'] %> <%= item['measurement_unit'] %></span> 
+    <span>$ <%= item['price'] %></span> 
+    <span>$ <%= item['quantity'] * item['price'] %></span> 
+  </li>
+<% end %>
+</ul>

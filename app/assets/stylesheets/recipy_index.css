@@ -1,0 +1,57 @@
+.recipy-card {
+  display: flex;
+  width: calc(100% - 40px);
+  margin: 20px 0;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.recipy-head {
+  width: 30%;
+  height: 100%;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.recipy-head > h2 {
+  font-size: 30px;
+}
+
+.buttons-cont {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.buttons-cont > a {
+  text-decoration: none;
+  color: rgb(131, 130, 130);
+  font-size: 15px;
+  border: 1px solid black;
+  padding: 3px 5px;
+  border-radius: 3px;
+}
+
+.new-rcp {
+  float: right;
+}
+
+.desc-cont {
+  width: 100%;
+  border-left: 1px solid #a8a6a6;
+}
+
+.description {
+  text-align: center;
+}
+
+.border-null {
+  border: none;
+}
+
+.btn_shopping_list {
+  white-space: nowrap;
+}

@@ -1,0 +1,66 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  width: 100%;
+  max-width: 780px;
+  margin: auto;
+  font-family: Helvetica, sans-serif;
+}
+
+#flash_alert,
+#flash_success,
+#flash_notice {
+  text-align: center;
+  padding: 10px;
+}
+
+#flash_success {
+  text-align: center;
+  padding: 10px;
+}
+
+.btn {
+  color: rgb(131, 130, 130);
+  background-color: #fff;
+  font-size: 15px;
+  border: 1px solid black;
+  padding: 3px 5px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.btn.save {
+  color: rgb(0, 128, 13);
+  border: solid 1px rgb(0, 128, 13);
+}
+
+.btn.save:hover {
+  background-color: rgba(0, 128, 13, 0.2);
+}
+
+.btn.delete {
+  color: maroon;
+  border: solid 1px maroon;
+}
+
+.btn.delete:hover {
+  background-color: rgba(128, 0, 0, 0.198);
+}
+
+.btn:hover {
+  cursor: pointer;
+}

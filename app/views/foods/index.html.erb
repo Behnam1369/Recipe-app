@@ -1,0 +1,11 @@
+
+
+<h1 class="food_title">Foods</h1>
+
+<%= link_to "New food", new_food_path, class:"new_food btn" %>
+<div class="food_list">
+  <% @foods.each do |food| %>
+    <%= render food %>
+  <% end %>
+</div>
+

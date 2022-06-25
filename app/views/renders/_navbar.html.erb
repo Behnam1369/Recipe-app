@@ -1,0 +1,24 @@
+<header>
+<nav class="navbar">
+<a href="/"><h2 classname="logo">Recipes</h2></a>
+<ul>
+<li class="nav-li">
+      <%= link_to("Log out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete }) if user_signed_in? %>
+</li>
+<li class="nav-li">
+      <%= link_to("Foods", foods_path, method: :get, data: { turbo_method: :get }) %>
+</li>
+<li class="nav-li">
+      <%= link_to("Recipes", recipies_path, method: :get, data: { turbo_method: :get }) %>
+</li>
+<li class="nav-li">
+      <%= link_to("Public recipes", public_recipes_path, method: :get, data: { turbo_method: :get }) %>
+</li>
+<li class="nav-li">
+      <%= link_to("Shopping list", shopping_list_path, method: :get, data: { turbo_method: :get }) %>
+</li>
+</ul>
+</nav>
+</header>
+
+
